@@ -16,18 +16,17 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  color: #212121;
-  background-color: orange;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Manrope, sans-serif;
+  color: ${p => p.theme.colors.mainText};
+  background-color: ${p => p.theme.colors.backGraund};
+  -webkit-font-smoothing: Manrope;
+  -moz-osx-font-smoothing: Manrope;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 h1,
 h2,
