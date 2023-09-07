@@ -14,7 +14,8 @@ const theme = {
     butonText: 'rgba(255, 255, 255, 1)',
     mainButonColor: 'rgba(52, 112, 255, 1)',
     accentButonColor: 'rgba(11, 68, 205, 1)',
-    backGraund: 'rgba(255, 255, 255, 1)',
+    backGround: 'rgba(255, 255, 255, 1)',
+    inputBackGround: 'rgba(247, 247, 251, 1)',
     elementColor: 'rgba(18, 20, 23, 0.1)',
   },
 
