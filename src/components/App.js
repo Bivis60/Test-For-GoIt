@@ -2,6 +2,7 @@ import { GlobalStyle } from 'GlobalStyle';
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Sidebar } from './Sidebar/Sidebar';
+import { ToastContainer } from 'react-toastify';
 
 const Home = lazy(() => import('../Pages/Home/Home'));
 const Catalog = lazy(() => import('../Pages/Catalog/Catalog'));
@@ -19,6 +20,7 @@ export const App = () => {
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
+      <ToastContainer position="top-center" autoClose={3000} />
     </>
   );
 };
