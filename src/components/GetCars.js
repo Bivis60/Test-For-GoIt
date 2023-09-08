@@ -11,3 +11,8 @@ export const getPageCars = async page => {
   const { data } = await axios.get(`${BASE_URL}?page=${page}&limit=8`);
   return data;
 };
+
+export const getById = async id => {
+  const { data } = await axios.get(`${BASE_URL}?id=${id}`);
+  return data;
+};
