@@ -12,19 +12,30 @@ const Catalog = () => {
       try {
         setError(false);
         const result = await getPageCars(page);
-        setCars(result);
+        setPage(page);
+        setCars(prevState => [...prevState, ...result]);
       } catch (error) {
         setError(true);
       }
     };
     getCars();
   }, [page]);
+  console.log(cars);
+  console.log(page);
+  console.log(error);
 
   const addPage = () => {
     setPage(prevState => prevState + 1);
   };
 
-  return <MenuBar />;
+  return (
+    <>
+      <MenuBar />
+      <button type="button" onClick={addPage}>
+        load more
+      </button>
+    </>
+  );
 };
 
 export default Catalog;
