@@ -44,30 +44,113 @@ export const MenuBar = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} autocomplete="off">
       <label>
         Car brand
         <input
+          list="carBrand"
           type="text"
           name="name"
           value={name}
           placeholder="Enter the text"
           onChange={handleChange}
         />
-        <BiChevronDown size={20} />
+        <datalist id="carBrand">
+          <option>Buick</option>
+          <option>MINI</option>
+          <option>Volvo</option>
+          <option>HUMMER</option>
+          <option>Subaru</option>
+          <option>Mitsubishi</option>
+          <option>Nissan</option>
+          <option>Lincoln</option>
+          <option>GMC</option>
+          <option>Bentley</option>
+          <option>Mercedes-Benz</option>
+          <option>Aston Martin</option>
+          <option>Land Rover</option>
+          <option>Pontiac</option>
+          <option>Lamborghini</option>
+          <option>Kia</option>
+          <option>Audi</option>
+          <option>BMW</option>
+          <option>Hyundai</option>
+          <option>Chevrolet</option>
+          <option>Chrysler</option>
+        </datalist>
+        {/* <BiChevronDown size={20} /> */}
       </label>
       <label>
         Price/ 1 hour
         <input
+          list="price"
           type="number"
           name="price"
           step={10}
           min={0}
-          max={200}
+          // max={550}
           value={price}
           placeholder="To $"
           onChange={handleChange}
         />
+        <datalist id="price">
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+          <option>50</option>
+          <option>60</option>
+          <option>70</option>
+          <option>80</option>
+          <option>90</option>
+          <option>100</option>
+          <option>110</option>
+          <option>120</option>
+          <option>130</option>
+          <option>140</option>
+          <option>150</option>
+          <option>160</option>
+          <option>170</option>
+          <option>180</option>
+          <option>190</option>
+          <option>200</option>
+          <option>210</option>
+          <option>220</option>
+          <option>230</option>
+          <option>240</option>
+          <option>250</option>
+          <option>260</option>
+          <option>270</option>
+          <option>280</option>
+          <option>290</option>
+          <option>300</option>
+          <option>310</option>
+          <option>320</option>
+          <option>330</option>
+          <option>340</option>
+          <option>350</option>
+          <option>360</option>
+          <option>370</option>
+          <option>380</option>
+          <option>390</option>
+          <option>400</option>
+          <option>410</option>
+          <option>420</option>
+          <option>430</option>
+          <option>430</option>
+          <option>440</option>
+          <option>450</option>
+          <option>460</option>
+          <option>470</option>
+          <option>480</option>
+          <option>490</option>
+          <option>500</option>
+          <option>510</option>
+          <option>520</option>
+          <option>530</option>
+          <option>540</option>
+          <option>550</option>
+        </datalist>
         <BiChevronDown size={20} />
       </label>
       <label>
