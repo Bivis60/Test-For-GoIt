@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-family: Manrope, sans-serif;
   color: ${p => p.theme.colors.mainText};
-  background-color: ${p => p.theme.colors.backGraund};
+  background-color: ${p => p.theme.colors.backGround};
   -webkit-font-smoothing: Manrope;
   -moz-osx-font-smoothing: Manrope;
 }
@@ -40,6 +40,11 @@ p {
 
 a {
   text-decoration: none;
+}
+
+input {
+  border: none;
+  background:  ${p => p.theme.colors.inputBackGround};
 }
 
 ul,

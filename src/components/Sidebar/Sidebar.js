@@ -1,12 +1,12 @@
 import { Suspense } from 'react';
-import { List, ListText, Ul } from './Sidebar.styled';
+import { List, ListText, Ul, Searchbar } from './Sidebar.styled';
 import { Loader } from 'components/Loader/Loader';
 import { Outlet } from 'react-router-dom';
 
 export const Sidebar = () => {
   return (
     <>
-      <header>
+      <Searchbar>
         <Ul>
           <List>
             <ListText to="/">home</ListText>
@@ -18,7 +18,7 @@ export const Sidebar = () => {
             <ListText to="favorites">favorites</ListText>
           </List>
         </Ul>
-      </header>
+      </Searchbar>
 
       <main>
         <Suspense fallback={<Loader />}>

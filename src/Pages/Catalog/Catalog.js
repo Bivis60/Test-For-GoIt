@@ -3,6 +3,7 @@ import { getPageCars } from 'components/GetCars';
 import { Loader } from 'components/Loader/Loader';
 import { MenuBar } from 'components/MenuBar/MenuBar';
 import { Modal } from 'components/Modal/Modal';
+import { ModalCard } from 'components/ModalCard/ModalCard';
 import { useEffect, useState } from 'react';
 
 const Catalog = () => {
@@ -43,7 +44,7 @@ const Catalog = () => {
   const closeModal = () => {
     setShowModal(false);
   };
-
+  console.log(showModal);
   return (
     <>
       <MenuBar />
@@ -51,7 +52,11 @@ const Catalog = () => {
 
       <CarsGallery carsData={cars} openModal={openModal} />
 
-      {showModal && <Modal closeModal={closeModal}></Modal>}
+      {showModal && (
+        <Modal closeModal={closeModal}>
+          <ModalCard />
+        </Modal>
+      )}
 
       <button type="button" onClick={addPage}>
         load more

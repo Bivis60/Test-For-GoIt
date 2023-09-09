@@ -16,3 +16,8 @@ export const getById = async id => {
   const { data } = await axios.get(`${BASE_URL}?id=${id}`);
   return data;
 };
+
+export const getFilteredCars  = async filter => {
+  const { data } = await axios.get(`${BASE_URL}?filter=${filter}`);
+  return data;
+};

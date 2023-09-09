@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { BiChevronDown } from 'react-icons/bi';
+// import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 
 export const MenuBar = ({ onSubmit }) => {
   const [name, setName] = useState('');
@@ -52,16 +54,21 @@ export const MenuBar = ({ onSubmit }) => {
           placeholder="Enter the text"
           onChange={handleChange}
         />
+        <BiChevronDown size={20} />
       </label>
       <label>
         Price/ 1 hour
         <input
           type="number"
           name="price"
+          step={10}
+          min={0}
+          max={200}
           value={price}
           placeholder="To $"
           onChange={handleChange}
         />
+        <BiChevronDown size={20} />
       </label>
       <label>
         Car mileage / km
