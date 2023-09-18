@@ -2,13 +2,17 @@ import { useState } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
 // import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 
-export const MenuBar = ({ onSubmit }) => {
+export const MenuBar = () => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
 
   const formData = { name, price, from, to };
+
+  const onSubmit = () => {
+    console.log(formData);
+  };
 
   const handleSubmit = evt => {
     evt.preventDefault();
@@ -44,7 +48,7 @@ export const MenuBar = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autocomplete="off">
+    <form onSubmit={handleSubmit}>
       <label>
         Car brand
         <input
@@ -78,7 +82,7 @@ export const MenuBar = ({ onSubmit }) => {
           <option>Chevrolet</option>
           <option>Chrysler</option>
         </datalist>
-        {/* <BiChevronDown size={20} /> */}
+        <BiChevronDown size={20} />
       </label>
       <label>
         Price/ 1 hour

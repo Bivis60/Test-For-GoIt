@@ -1,9 +1,11 @@
 import { CarsGalleryItems } from 'components/CarsGalleyItems/CarsGalleryItems';
 
-export const CarsGallery = ({ carsData, openModal }) => {
+export const CarsGallery = ({ cars, openModal }) => {
   return (
     <ul>
-      <CarsGalleryItems cars={carsData} openModal={openModal} />
+      {cars.map(car => (
+        <CarsGalleryItems car={car} key={car.id} openModal={openModal} />
+      ))}
     </ul>
   );
 };
