@@ -34,7 +34,7 @@ export const CarsGalleryItems = ({ car, openModal }) => {
           <li>{type}</li>
           <li>{molel}</li>
           <li>{id}</li>
-          <li>{accessories.splice(2, 1)}</li>
+          <li>{accessories[2]}</li>
         </ul>
         <button
           type="button"
